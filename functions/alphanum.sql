@@ -1,6 +1,6 @@
-/*******************/
-/* 구두점 제거 함수 선언 */
-/*******************/
+/*************************/
+/** 구두점 제거 함수 선언 **/
+/*************************/
 DROP FUNCTION IF EXISTS alphanum; 
 DELIMITER | 
 CREATE FUNCTION alphanum( str varchar(500) ) RETURNS varchar(500) 
@@ -20,6 +20,4 @@ BEGIN
   UNTIL i > len END REPEAT; 
   RETURN ret; 
 END | 
-DELIMITER ; \
-
-select ee_name, alphanum(ee_name) from temp_all;
+DELIMITER ; 
